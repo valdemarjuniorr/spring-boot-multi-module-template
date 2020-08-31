@@ -12,8 +12,8 @@ Sentimos a necessidade de uma forma padronizada de registrar as decisões arquit
 
 ## Decisão
 
-Utilizaremos ADRs (Architecture Decision Records) para registrar as decisões arquiteturais do produto, por entendermos que é uma forma leve e eficiente para manter o histórico destas informações. Para mais informações sobre ADRs leia nossa [documentação interna sobre o uso de ADRs](http://docs.prod.contaazul.local/standards/documentation/Architectural-Decision-Records/como-utilizar-adrs/).
+Utilizaremos ADRs (Architecture Decision Records) para registrar as decisões arquiteturais, por entendermos que é uma forma leve e eficiente para manter o histórico destas informações. Para mais informações sobre ADRs leia nossa [Architectural Decision Records](https://adr.github.io/).
 
 ## Consequências
 
-Passaremos a manter o registro das decisões arquiteturais relevantes ao produto no próprio repositório, no diretório docs/adr, seguindo o padrão de nomenclatura NNNN-titulo-da-adr-minusculo.md
+Passaremos a manter o registro das decisões arquiteturais relevantes no próprio repositório, no diretório docs/adr.
