@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  database:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: database
+      POSTGRES_PASSWORD: database123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts/postgres/postgres.sql:/docker-entrypoint-initdb.d/postgres.sql
+  localstack:
+    container_name: localstack_contabil
+    image: localstack/localstack
+    ports:
+      - "4567-4599:4567-4599"
+      - "9999:9999"
+    environment:
+      - SERVICES=sns, sqs, s3
+      - DEFAULT_REGION=us-east-1
+      - DATA_DIR=./target/localstack
+      - PORT_WEB_UI=9999
+    volumes:
+      - ./scripts/localstack/init.sh:/docker-entrypoint-initaws.d/init.sh

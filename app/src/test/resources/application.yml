@@ -1,0 +1,18 @@
+  org:
+    hibernate:
+      SQL: info
+      type:
+        descriptor:
+          sql: info
+spring:
+  application:
+    name: spring-boot-multi-module-template
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    show-sql: false
+
+environment:
+  status: OK

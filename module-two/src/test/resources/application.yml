@@ -1,0 +1,51 @@
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+environment:
+  status: OK
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: info
+        type:
+          descriptor:
+            sql: trace
+message:
+  version:
+    finance: 1.0
+queue:
+  finance: FINANCE_CA-ACCOUNTING_EVENTS
+  finance-dlq: FINANCE_CA-ACCOUNTING_EVENTS_DLQ
+  bank: CA_BANK-ACCOUNTING_EVENTS
+  bank-dlq: CA_BANK-ACCOUNTING_EVENTS_DLQ
+spring:
+  database-platform: org.hibernate.dialect.SQLServer2012Dialect
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+bank:
+  url: http://localhost:6565
+ca:
+  url: http://localhost:6565/rest
+userInfo:
+  url: http://localhost:6565
+notification-panel:
+  resolution-url:
+    invalid-message: http://localhost:6565/rest/login/heimdall/#/financeiro/categorias
+api-accounting:
+  url: http://localhost:6565
+period-blocker:
+  url: http://localhost:6565
+accountancy:
+  url: http://localhost:6565
+  admin-token: tokenMarotoDoAccountancy

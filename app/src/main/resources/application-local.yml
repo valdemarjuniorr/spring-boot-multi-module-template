@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-boot-multi-module-template
+  datasource:
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 5
+    username: sa
+    password: 12qwASzx34
+    url: jdbc:postgresql://localhost:5432/database
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+environment:
+  status: OK
+
+localstack:
+  enabled: true
+  sns:
+    enabled: true
+  sqs:
+    enabled: true
+  s3:
+    enabled: true
